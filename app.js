@@ -8,8 +8,7 @@ let kirillcha = false;
 
 bot.on('message', (msg) => {
     const chatId = msg.chat.id;
-    const fullName = msg.chat.first_name+" "+ (msg.chat.last_name ?? "")
-    console.log(fullName)
+    const fullName = msg.chat.first_name
     if(msg.text=="/start"){
         bot.sendMessage(chatId, `Assalomu aleykum <i><b>${fullName}</b></i> ! Botimizga Xush kelibsiz! Botimiz haqida to'liq ma'lumot olish uchun /info ni bosing`, {
             parse_mode: "HTML"
